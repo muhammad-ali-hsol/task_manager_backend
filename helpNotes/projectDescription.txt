@@ -1,0 +1,66 @@
+Project: Task Management System
+Project Overview:
+Create a backend for a task management system where users can create projects, and each project can have multiple tasks. Users can assign tasks to multiple team members, set deadlines, and track the status of tasks. The system should support complex associations, including many-to-many relationships, and implement features like grouping tasks by project, filtering by status, and retrieving tasks assigned to a specific user.
+
+Key Features:
+User Management:
+
+Users can register and log in.
+Users can belong to multiple projects.
+Project Management:
+
+Users can create projects.
+Each project can have multiple tasks.
+Users can invite other users to join a project.
+Task Management:
+
+Tasks have properties like title, description, status, priority, deadline, and assignedUsers.
+Tasks are associated with a project and can be assigned to multiple users (many-to-many association).
+Users can update the status of tasks (e.g., To Do, In Progress, Completed).
+Complex Associations:
+
+Many-to-Many association between Tasks and Users (a task can be assigned to multiple users, and a user can have multiple tasks).
+One-to-Many association between Projects and Tasks (a project can have multiple tasks).
+Filtering & Grouping:
+
+Group tasks by project.
+Filter tasks by status (e.g., all tasks that are In Progress).
+Retrieve all tasks assigned to a specific user across all projects.
+Advanced Queries:
+
+Use GROUP BY to count the number of tasks per status within a project.
+Aggregate functions to calculate the number of overdue tasks.
+Complex joins to retrieve tasks with details of the users assigned to them.
+Database Models:
+User:
+
+id, name, email, password
+Project:
+
+id, name, description, ownerId (foreign key to User)
+Task:
+
+id, title, description, status, priority, deadline, projectId (foreign key to Project)
+TaskAssignment (junction table for many-to-many association between Tasks and Users):
+
+taskId (foreign key to Task)
+userId (foreign key to User)
+Endpoints:
+User Endpoints:
+
+Register/Login
+Get user details
+Get tasks assigned to the user
+Project Endpoints:
+
+Create a project
+Get projects for a user
+Invite users to a project
+Task Endpoints:
+
+Create a task
+Assign users to a task
+Update task status
+Get tasks by project (grouped by status)
+Get tasks assigned to a specific user
+This project involves setting up complex associations in Sequelize, using advanced queries like GROUP BY, and handling many-to-many relationships. It’s challenging enough to showcase your skills with Sequelize and Node.js, yet small enough to complete within a short time frame.
