@@ -10,7 +10,7 @@ Users can belong to multiple projects.
 Project Management:
 
 Users can create projects.
-Each project can have multiple tasks.
+Each project can have multiple tasks.task.js
 Users can invite other users to join a project.
 Task Management:
 
