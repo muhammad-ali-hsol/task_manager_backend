@@ -13,7 +13,7 @@ export const UserModel=sequelize.define('user',{
         allowNull:false
     },
     password:{
-        type:DataTypes.STRING(),
+        type:DataTypes.STRING,
         require:true,
         allowNull:false,
         validate:{
