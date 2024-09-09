@@ -20,4 +20,4 @@ export const UserModel=sequelize.define('user',{
             len:[8,20]
         }
     }
-})
+});
